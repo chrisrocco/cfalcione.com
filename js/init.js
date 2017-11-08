@@ -83,7 +83,7 @@ var matResume = function () {
 	if( $('#map_canvas').length > 0 ){	
 		var settings = {
 			zoom: 11,
-			center: new google.maps.LatLng(40.6700, -73.9400),
+			center: new google.maps.LatLng(33.499958, -86.805350),
 			styles:[
 				{
 					"stylers": [

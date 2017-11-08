@@ -4,6 +4,7 @@
   "description": "Personal website for Caleb Falcione",
   "main": "index.js",
   "scripts": {
+    "serve": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/chrisrocco/v-card-caleb/issues"
   },
-  "homepage": "https://github.com/chrisrocco/v-card-caleb#readme"
+  "homepage": "https://github.com/chrisrocco/v-card-caleb#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
 }
