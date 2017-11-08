@@ -1,7 +1,9 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once 'phpmailer/PHPMailerAutoload.php';
+$config = require_once 'config.php';
 
 if (isset($_POST['inputName']) && isset($_POST['inputEmail'])&& isset($_POST['inputMessage'])) {
 
@@ -15,10 +17,18 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail'])&& isset($_POST['in
     //create an instance of PHPMailer
     $mail = new PHPMailer();
 
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = $config['host'];  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = $config['smtp_auth'];                               // Enable SMTP authentication
+    $mail->Username = $config['username'];                 // SMTP username
+    $mail->Password = $config['password'];                           // SMTP password
+    $mail->SMTPSecure = $config['smtp_secure'];                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = $config['smtp_port'];                                    // TCP port to connect to
+
     $mail->From = $_POST['inputEmail'];
     $mail->FromName = $_POST['inputName'];
-    $mail->AddAddress('themenerds@gmail.com'); //recipient 
-    $mail->Subject = 'Enquiry from Dexter';
+    $mail->AddAddress( $config['to_email'] ); //recipient
+    $mail->Subject = $config['to_subject'];
     $mail->Body = "Name: " . $_POST['inputName'] . "\r\n\r\nMessage: " . stripslashes($_POST['inputMessage']);
 
     if (isset($_POST['ref'])) {
