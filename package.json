@@ -1,0 +1,23 @@
+{
+  "name": "v-card-caleb",
+  "version": "1.0.0",
+  "description": "Personal website for Caleb Falcione",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisrocco/v-card-caleb.git"
+  },
+  "keywords": [
+    "caleb",
+    "falcione"
+  ],
+  "author": "Chris Rocco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisrocco/v-card-caleb/issues"
+  },
+  "homepage": "https://github.com/chrisrocco/v-card-caleb#readme"
+}

@@ -1,0 +1,12 @@
+{
+    "name": "chris/v-card-caleb",
+    "description": "Personal website for caleb",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Chris Rocco",
+            "email": "chris.rocco7@gmail.com"
+        }
+    ],
+    "require": {}
+}
