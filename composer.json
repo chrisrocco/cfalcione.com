@@ -8,5 +8,8 @@
             "email": "chris.rocco7@gmail.com"
         }
     ],
+    "scripts": {
+        "start": "php -S localhost:8080"
+    },
     "require": {}
 }
